@@ -48,9 +48,9 @@ ul::after {
     }
     
     ul.mainmenu > li {
-        float: left;
-        width: 20%;
-        font-size: 1.5em;
+        display: inline-block;
+        padding: 1em;
+        font-size: 1.2em;
         text-align: center;
     }
 
