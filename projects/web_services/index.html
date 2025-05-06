@@ -60,7 +60,61 @@
     }
     </code></pre>
       <h2>Java ProductDB class SOAP Web Service with Unique Product</h2>
+      <h3>The following screenshots and sample code are from a project that had the purpose
+        of modifying a DB emulator type SOAP Web Service class, creating related class testers
+        and a SOAP Web Service for the modified classes.
+      </h3>
       <h3>Sample Screenshots</h3>
+      <h4>After Searching Modified Record using Web Service Test Client</h4>
+      <img src="../../images/db_record.png" alt="Test Client Results" style="width:100%; max-width:650px;" />
+      <br />
+      <h4>Sample "DB" Class Code</h4>
+      <pre><code>
+        public static Product getProduct(String productCode)
+        {
+            // In a more realistic application, this code would
+            // get the data for the product from a file or database
+            // For now, this code just uses if/else statements
+            // to return the correct product data
+    
+            // create the Product object
+            Product product = new Product();
+    
+            // fill the Product object with data based on productCode received
+            product.setCode(productCode);
+            
+            if (productCode.equalsIgnoreCase("java"))
+            {
+                product.setDescription("Murach's Beginning Java 2");
+                product.setPrice(49.50);
+            }
+            else if (productCode.equalsIgnoreCase("jsps"))
+            {
+                product.setDescription("Murach's Java Servlets and JSP");
+                product.setPrice(49.50);
+            }
+            else if (productCode.equalsIgnoreCase("mcb2"))
+            {
+                product.setDescription("Murach's Mainframe COBOL");
+                product.setPrice(59.50);
+            }
+            else if (productCode.equalsIgnoreCase("txtp"))
+            {
+                product.setDescription("TextPad");
+                product.setPrice(20.00);
+            }
+            else if (productCode.equalsIgnoreCase("mdm3"))
+            {
+                product.setDescription("Web Service Tutorials by Mario Daniel Montes");
+                product.setPrice(19.85);
+            }
+            else
+            {
+                product.setDescription("Unknown Product Code");
+            }
+            return product;
+        }
+      </code></pre>
       <h2>Scrum 4 Team Project Videos and Slides</h2>
       <h3>The attached slides and video are from a presentation related to a Scrum Project that had the purpose
         of creating a Java based HTML-JSP-Java Web Application along with a XML-SOAP Web Service Provider with
