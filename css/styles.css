@@ -51,7 +51,7 @@ ul::after {
     ul.mainmenu > li {
         float: left;
         width: 12.5%;
-        font-size: 1.5em;
+        font-size: 1.0em;
         text-align: center;
     }
 
