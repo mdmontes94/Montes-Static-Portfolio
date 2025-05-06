@@ -10,7 +10,7 @@
           <a class="navicon"><img src="images/navicon.png"></a>
           <nav>
               <ul class="mainmenu">
-                  <li><a href="index.html">Home</a></li>
+                  <li><a href="../../index.html">Home</a></li>
                   <li><a href="../../docs/MarioMontesResume.pdf" target="_blank">Resume</a></li>
                   <li><a href="../../CIS_Syllabi.html">CIS Syllabi</a></li>
                   <li><a href="../../projects/java_project/index.html">Java Project</a></li>
@@ -22,10 +22,32 @@
           </nav>
       </header>
       <h1>Sample Web Services Projects</h1>
-      <h2>RESTful AJAX-JSON-PHP-MySQL DB Web Service</h2>
-      <h3>Sample Screenshots</h3>
       <h2>Unique CRUD JSON-PHP-MySQL RESTful Web Service</h2>
       <h3>Sample Screenshots</h3>
+      <h3>Sample API Code</h3>
+      <pre><code>
+        public function OnLoad() {
+        if (isset($_POST['Request'])) {
+            $request = $_POST['Request'];
+            $type = $_POST['Type'];
+
+            switch ($request) {
+                case 'Search':
+                    $this->SearchItem($type);
+                    break;
+                case 'Insert':
+                    $this->InsertItem($type);
+                    break;
+                case 'Update':
+                    $this->UpdateItem($type);
+                    break;
+                case 'Delete':
+                    $this->DeleteItem($type);
+                    break;
+            }
+        }
+    }
+    </code></pre>
       <h2>Java ProductDB class SOAP Web Service with Unique Product</h2>
       <h3>Sample Screenshots</h3>
       <h2>Scrum 4 Team Project Videos and Slides</h2>
